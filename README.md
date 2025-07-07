@@ -43,6 +43,11 @@ SOS.net (v1) is based on the Keras implementation of RetinaNet object detection 
 
 ## Instructions
 
+### Development Tools
+* Visual Studio Code (supports SSH access to Linux from Windows or Mac)
+* LabelImg for image annotation: http://tzutalin.github.io/labelImg/
+* Windows PowerToy for renaming and resizing images
+
 ### Installation (Linux Only)
 0) Install Python 3.6
 1) Create a project folder called sos
@@ -53,11 +58,6 @@ SOS.net (v1) is based on the Keras implementation of RetinaNet object detection 
 ```
 python setup.py build_ext --inplace
 ```
-
-### Development Tools
-* Visual Studio Code (supports SSH access to Linux from Windows or Mac)
-* LabelImg for image annotation: http://tzutalin.github.io/labelImg/
-* Windows PowerToy for renaming and resizing images
 
 ### Dataset Preparation
 1. Download images from your drone (e.g., connect DJI Mini 2 directly to your laptop).
@@ -105,7 +105,7 @@ python setup.py build_ext --inplace
 # Install Keras 2.4 (required)
 pip install keras==2.4.1
 
-# You are all set!
+# All set!
 ```
 Whenever you log back into your system, activate your environment by running: `source ~/sosenv/bin/activate`
 
@@ -122,7 +122,7 @@ voc_classes = {
     'horse'       : 6
 }
 ```
-Please download the latest training snapshot from this [link](https://drive.google.com/file/d/111cTgEaHRkhjURit0uHgVy-WWO8x1KxG/view?usp=sharing). Run training commands (adjust --steps according to your training set size):
+Download the latest training snapshot from this [link](https://drive.google.com/file/d/111cTgEaHRkhjURit0uHgVy-WWO8x1KxG/view?usp=sharing). Run training commands (adjust `--steps` according to your training set size):
 ```
 # Train from scratch
 python keras_retinanet/bin/train.py --batch-size 1 --snapshot-path snapshots --random-transform --steps 45 pascal /home/tf23/sosVOC
