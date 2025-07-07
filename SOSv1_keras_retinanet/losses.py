@@ -17,7 +17,6 @@ limitations under the License.
 import tensorflow
 from tensorflow import keras
 
-
 def focal(alpha=0.25, gamma=2.0, cutoff=0.5):
     """ Create a functor for computing the focal loss.
 
