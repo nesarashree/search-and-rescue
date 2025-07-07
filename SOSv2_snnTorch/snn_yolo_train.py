@@ -1,5 +1,7 @@
-# Spiking YOLOv3 Training Script (snn_yolo_train.py) - SOS.net (v2)
-# This script adapts the YOLOv3 object detection model for use with Spiking Neural Networks (SNNs), using snnTorch.
+'''
+Spiking YOLOv3 Training Script (snn_yolo_train.py) - SOS.net (v2)
+This script adapts the YOLOv3 object detection model for use with Spiking Neural Networks (SNNs), using snnTorch.
+'''
 
 import argparse
 import torch
