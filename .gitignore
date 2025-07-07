@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.h5
-env/
-sosenv/
-.vscode/
-.DS_Store
