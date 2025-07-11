@@ -5,7 +5,7 @@ The National Park Service’s missing person reports often include case-specific
 *How can drone-based SAR be automated and optimized to detect both personalized identifiers and general distress signals, without sacrificing power efficiency, processing speed, or accuracy?*
 
 ## SOS.net (v2): Spiking Neural Network 
-Neuromorphic computing, particularly Spiking Neural Networks (SNNs), offers a compelling solution. These models are well-suited for deployment on lightweight drone hardware (event-driven processing, low latency, spike-based activation, local short-term memory at the neuron/network level), enabling intelligent, energy-efficient inference in real time. 
+Neuromorphic computing, particularly Spiking Neural Networks (SNNs), offers a compelling solution. These models are well-suited for deployment on lightweight drone hardware (event-driven processing, low latency, spike-based activation, local short-term memory at the neuron/network level), enabling intelligent, energy-efficient inference in real time, rather than after-the-fact video stream processing.
 
 SOS.net (v2) adapts the YOLOv3 object detection model for use with SNNs, using [snnTorch](https://snntorch.readthedocs.io/en/latest/).
 <p align="center">
@@ -39,7 +39,7 @@ $ python snn_yolo_train.py \
     --device 0
 ```
 ## SOS.net (v1): Deep Neural Network
-SOS.net (v1) is based on the Keras implementation of RetinaNet object detection as described in [Focal Loss for Dense Object Detection](https://arxiv.org/abs/1708.02002) by Lin et al. The `keras-retinanet` repository provides all the necessary tools to train models on drone images for downstream Search and Rescue (SAR) applications.
+SOS.net (v1) is based on the Keras implementation of RetinaNet object detection as described in [Focal Loss for Dense Object Detection](https://arxiv.org/abs/1708.02002) by Lin et al. This version is runnable only on footage the drone camera has already captured — NOT the drone hardware itself (in real-time). The `keras-retinanet` repository provides all the necessary tools to train models on drone images for downstream Search and Rescue (SAR) applications.
 
 ## Instructions
 
